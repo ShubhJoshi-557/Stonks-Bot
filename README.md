@@ -3,7 +3,7 @@
 - Stonks bot is a Discord Bot for all the Stock Market/Crypto Enthusiasts and Day Traders.🤑
 - It provides Up-To-Date prices of all the major stocks enlisted globally and all the major Cryptocurrencies.💸
 - Apart from that it also gives a timeseries plot of the stock/crypto price for the given duration of time.📈
-- Add This Bot To Your Server --> https://discord.com/api/oauth2/authorize?client_id=891609826088603709&permissions=534723950656&scope=bot 
+- Invite This Bot To Your Server --> https://shubhjoshi-557.github.io/Stonks-Bot-Website/ 
 -------------------------------------------------------------------------------------------------------------------------------------------------
 ## How To Use
 - The Syntax of the bot commands is as follows: 
