@@ -4,6 +4,7 @@ import pandas as pd
 import os
 import plotly.graph_objs as go
 from dotenv import load_dotenv
+from keep_alive import keep_alive
 
 load_dotenv()
 with open("help.txt", encoding="utf8") as f:
@@ -65,6 +66,7 @@ async def on_message(message):
             await message.channel.send(file=discord.File('foo.png'))
     print('we have logged in as {0.user}'.format(client))
 
+keep_alive()
 client.run(os.getenv('TOKEN'))
 
 # plt.show()
