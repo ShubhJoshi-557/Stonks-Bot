@@ -22,14 +22,17 @@ async def on_message(message):
     if message.content.startswith('$stonk'):
         temp = message.content.split(" ")
         if(len(temp)==1):
-            await message.channel.send("For More Information, type: ```$stonk help```")
+            welcome_embed=discord.Embed(title="Welcome!", description="$stonk is a prefix command for Stonks Bot. For More Information, type: ```$stonk help```", color=0x5E4A9D)
+            await message.channel.send(embed=welcome_embed)
             return
         if(message.content=="$stonk help"):
-            await message.channel.send(help_content)
+            help_embed=discord.Embed(title="Help", description=help_content, color=discord.Color.blue())
+            await message.channel.send(embed=help_embed)
             return
         msg = message.content.split(' ')
         if(len(msg)<3):
-            await message.channel.send("Invalid Command! For More information, type: ```$stonk help ```")
+            invalid_embed=discord.Embed(title="⚠️", description="Invalid Command! For More information, type: ```$stonk help ```", color=discord.Color.red())
+            await message.channel.send(embed=invalid_embed)
             return
         currency = msg[1].split("-")
         if(len(currency)<2):
@@ -46,11 +49,13 @@ async def on_message(message):
             curr_df = yf.download(tickers = msg[1], 
                     period="1d",interval="1m")
         else:
-            await message.channel.send("Enter Valid Duration")
+            invalid_duration_embed=discord.Embed(title="⚠️", description="Enter Valid Duration!", color=discord.Color.red())
+            await message.channel.send(embed=invalid_duration_embed)
             return
         
         if(df.empty):
-            await message.channel.send(str(msg[1])+" is either Delisted or Spelt Incorrectly!")
+            invalid_name_embed=discord.Embed(title="⚠️", description=str(msg[1])+" is either Delisted or Spelt Incorrectly!", color=0xEDBC27)
+            await message.channel.send(embed=invalid_name_embed)
         else:
             fig = go.Figure()
             fig.add_trace(go.Candlestick(x = df.index, 
@@ -62,11 +67,11 @@ async def on_message(message):
                 ))
             fig.update_layout(template='plotly_dark', title="Stock Price", yaxis_title="Price(in USD)", width=1500,height=750)
             fig.write_image("foo.png")
-            await message.channel.send(str(msg[1])+" Current Stock Price 💸: ```"+str(format(curr_df['Open'][0],".2f"))+" "+currency[1]+"```")
+            output_embed=discord.Embed(description=str(msg[1])+" Current Stock Price 💸: ```"+str(format(curr_df['Open'][0],".2f"))+" "+currency[1]+"```", color=0x1AC255)
+            await message.channel.send(embed=output_embed)
             await message.channel.send(file=discord.File('foo.png'))
     print('we have logged in as {0.user}'.format(client))
 
 keep_alive()
 client.run(os.getenv('TOKEN'))
-
 # plt.show()
