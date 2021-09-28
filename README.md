@@ -18,14 +18,15 @@
 ## Screenshots
 ### Stonks Bot in Action! 🔥
 -------------------------------------------------------------------------------------------------------------------------------------------------
-![image](https://user-images.githubusercontent.com/62555809/134845043-da507a31-751c-4651-ac67-b890ed6575a5.png)
-![image](https://user-images.githubusercontent.com/62555809/134845062-678f0ae4-ece3-4d7d-8e87-a832d7a4efa3.png)
-![image](https://user-images.githubusercontent.com/62555809/134845101-af4b1317-44a8-416c-8b73-eb7bccd46ee4.png)
-![image](https://user-images.githubusercontent.com/62555809/134845118-24a0225b-cc26-4430-ac76-ee9919d4f5c6.png)
-![image](https://user-images.githubusercontent.com/62555809/134845144-609bb5bc-9a1c-4441-a3e2-aef9a84c9286.png)
+
+![image](https://user-images.githubusercontent.com/62555809/135084198-65a34823-807d-4f53-8cdb-819b6c804a0e.png)
+![image](https://user-images.githubusercontent.com/62555809/135084236-ed0ce010-6d27-4aa5-b00f-ed801a42f2fd.png)
+![image](https://user-images.githubusercontent.com/62555809/135084276-ea7d0b63-5bcf-4795-ab01-16efbdf3b312.png)
+![image](https://user-images.githubusercontent.com/62555809/135084315-9a822c9d-90ed-4d2f-8f15-47883be853e2.png)
+![image](https://user-images.githubusercontent.com/62555809/135084382-0a244d3e-41f8-4606-ba5b-92906acda728.png)
 
 ### Make Sure You Type The Valid Commands! ⚠️
 -------------------------------------------------------------------------------------------------------------------------------------------------
-![image](https://user-images.githubusercontent.com/62555809/134813466-d853dedb-b45c-40c9-84b5-a021004b4ac9.png)
-![image](https://user-images.githubusercontent.com/62555809/134813487-30e9ddac-0a4a-43df-bfe8-48d5fa3f1b65.png)
-![image](https://user-images.githubusercontent.com/62555809/134813505-8f69ecee-cf2c-4b60-98db-421a1a267306.png)
+![image](https://user-images.githubusercontent.com/62555809/135084501-f7294872-6d77-412a-92b1-5bba40f52525.png)
+![image](https://user-images.githubusercontent.com/62555809/135084529-8bba13d5-a0e1-4811-b551-fd328dda38f9.png)
+![image](https://user-images.githubusercontent.com/62555809/135084568-00b2f7be-d316-42dd-ba9f-4a502d8fa200.png)
