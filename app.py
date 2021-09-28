@@ -65,7 +65,7 @@ async def on_message(message):
                     close = df['Close'],
                     name = "Data",
                 ))
-            fig.update_layout(template='plotly_dark', title="Stock Price", yaxis_title="Price(in USD)", width=1500,height=750)
+            fig.update_layout(template='plotly_dark', title="Stock Price", yaxis_title="Price(in "+currency[1]"+)", width=1500,height=750)
             fig.write_image("foo.png")
             output_embed=discord.Embed(description=str(msg[1])+" Current Stock Price 💸: ```"+str(format(curr_df['Open'][0],".2f"))+" "+currency[1]+"```", color=0x1AC255)
             await message.channel.send(embed=output_embed)
