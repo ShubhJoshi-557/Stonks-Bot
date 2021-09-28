@@ -12,4 +12,5 @@ For Example:
 This command will give you the current stock price of Tesla Stocks and Fluctuation in its price in the last one day.
 The Duration should only be one of these :
 ```[1d, 5d, 1mo, 3mo, 6mo, 1y]```
+For More Information Regarding Stock Names, Type: ```$stonk help 2```
 Enjoy!💰

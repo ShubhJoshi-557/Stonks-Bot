@@ -9,7 +9,8 @@ from keep_alive import keep_alive
 load_dotenv()
 with open("help.txt", encoding="utf8") as f:
     help_content = f.read()
-
+with open("help2.txt", encoding="utf8") as f2:
+    help_content2 = f2.read()
 client = discord.Client()
 @client.event
 async def on_ready():
@@ -26,8 +27,12 @@ async def on_message(message):
             await message.channel.send(embed=welcome_embed)
             return
         if(message.content=="$stonk help"):
-            help_embed=discord.Embed(title="Help", description=help_content, color=discord.Color.blue())
+            help_embed=discord.Embed(title="Help Page 1/2", description=help_content, color=discord.Color.blue())
             await message.channel.send(embed=help_embed)
+            return
+        if(message.content=="$stonk help 2"):
+            help_embed2=discord.Embed(title="Help Page 2/2", description=help_content2, color=discord.Color.blue())
+            await message.channel.send(embed=help_embed2)
             return
         msg = message.content.split(' ')
         if(len(msg)<3):
@@ -35,8 +40,17 @@ async def on_message(message):
             await message.channel.send(embed=invalid_embed)
             return
         currency = msg[1].split("-")
+        Dict = {'ns': 'INR', 'bo': 'INR', 'to': 'CAD', 'l': 'GBp', 'sz': 'CNY', 't': 'JPY', 'hk': 'HKD', 'ss': 'CNY', }
         if(len(currency)<2):
-            currency.append("USD")
+            temp = currency[0].split(".")
+            print(currency)
+            if(len(temp)>1):
+                if temp[1].lower() in Dict.keys():
+                    currency.append(Dict[temp[1].lower()])
+                else:
+                    currency.append(" ")
+            else:
+                currency.append("USD")
         
         duration = ['1d', '5d', '1mo', '3mo', '6mo', '1y', '1D', '5D', '1MO', '3MO', '6MO', '1Y']
         if(msg[2] in duration):
@@ -54,7 +68,7 @@ async def on_message(message):
             return
         
         if(df.empty):
-            invalid_name_embed=discord.Embed(title="⚠️", description=str(msg[1])+" is either Delisted or Spelt Incorrectly!", color=0xEDBC27)
+            invalid_name_embed=discord.Embed(title="⚠️", description=str(msg[1])+" is either Delisted or Spelt Incorrectly!\n\n For More Info Regarding Stock Names, type:```$stonk help 2```", color=0xEDBC27)
             await message.channel.send(embed=invalid_name_embed)
         else:
             fig = go.Figure()

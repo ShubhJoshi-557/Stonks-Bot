@@ -1,0 +1,18 @@
+If your company stock is not based in USA and not enlisted on NYSE (New York Stock Exchange) or NASDAQ,
+
+And If It Is Enlisted In Any Of These Stock Exchanges,
+
+Add the following suffix to your stock name accordingly:
+
+```
+.ns - National Stock Exchange (NSE)   - 🇮🇳
+.bo - Bombay Stock Exchange (BSE)     - 🇮🇳
+.to - Toronto Stock Exchange (TSX)    - 🇨🇦
+.L  - London Stock Exchange (LSE)     - 🇬🇧
+.sz - Shenzhen Stock Exchange (SZSE)  - 🇨🇳
+.T  - Tokyo Stock Exchange (TSE)      - 🇯🇵
+.hk - Hong Kong Stock Exchange (HKEX) - 🇭🇰
+.ss - Shanghai Stock Exchange (SSE)   - 🇨🇳
+```
+
+> For Example: $stonk RELIANCE.ns 1d
